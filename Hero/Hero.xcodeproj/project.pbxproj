@@ -10,6 +10,7 @@
 		44FA778C24CACE460018DB58 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FA778224CACE460018DB58 /* Hero.framework */; };
 		44FA779124CACE460018DB58 /* HeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA779024CACE460018DB58 /* HeroTests.swift */; };
 		44FA779324CACE460018DB58 /* Hero.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FA778524CACE460018DB58 /* Hero.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44FA77AA24CACEE40018DB58 /* HeroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA77A924CACEE40018DB58 /* HeroManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		44FA778B24CACE460018DB58 /* HeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FA779024CACE460018DB58 /* HeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTests.swift; sourceTree = "<group>"; };
 		44FA779224CACE460018DB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FA77A924CACEE40018DB58 /* HeroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				44FA778524CACE460018DB58 /* Hero.h */,
 				44FA778624CACE460018DB58 /* Info.plist */,
+				44FA77A924CACEE40018DB58 /* HeroManager.swift */,
 			);
 			path = Hero;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					44FA778124CACE460018DB58 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					44FA778A24CACE460018DB58 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FA77AA24CACEE40018DB58 /* HeroManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		44FA779724CACE460018DB58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AUBG48CJZ6;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = thongpak21.Hero;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		44FA779824CACE460018DB58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AUBG48CJZ6;
@@ -388,6 +396,7 @@
 		44FA779A24CACE460018DB58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUBG48CJZ6;
 				INFOPLIST_FILE = HeroTests/Info.plist;
@@ -406,6 +415,7 @@
 		44FA779B24CACE460018DB58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUBG48CJZ6;
 				INFOPLIST_FILE = HeroTests/Info.plist;
