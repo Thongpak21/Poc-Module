@@ -17,4 +17,8 @@ public class HeroManager {
     public func getSomething() -> String {
         return "hi there"
     }
+    
+    public func doSomething() {
+        print("test")
+    }
 }
