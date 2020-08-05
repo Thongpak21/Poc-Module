@@ -11,6 +11,7 @@
 		44FA779124CACE460018DB58 /* HeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA779024CACE460018DB58 /* HeroTests.swift */; };
 		44FA779324CACE460018DB58 /* Hero.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FA778524CACE460018DB58 /* Hero.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44FA77AA24CACEE40018DB58 /* HeroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA77A924CACEE40018DB58 /* HeroManager.swift */; };
+		C8F69C50F0DA44A6B2C9EF97 /* libPods-Hero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A113DC5E6E6B0F0B7AE41553 /* libPods-Hero.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,9 @@
 		44FA779024CACE460018DB58 /* HeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTests.swift; sourceTree = "<group>"; };
 		44FA779224CACE460018DB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44FA77A924CACEE40018DB58 /* HeroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroManager.swift; sourceTree = "<group>"; };
+		8BB954BAE815E0D0C4F55D52 /* Pods-Hero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero.release.xcconfig"; path = "Target Support Files/Pods-Hero/Pods-Hero.release.xcconfig"; sourceTree = "<group>"; };
+		A113DC5E6E6B0F0B7AE41553 /* libPods-Hero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B658292CCC81E667E89953B4 /* Pods-Hero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero.debug.xcconfig"; path = "Target Support Files/Pods-Hero/Pods-Hero.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F69C50F0DA44A6B2C9EF97 /* libPods-Hero.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 				44FA778424CACE460018DB58 /* Hero */,
 				44FA778F24CACE460018DB58 /* HeroTests */,
 				44FA778324CACE460018DB58 /* Products */,
+				AFD99438A90B78F8DC9DC147 /* Pods */,
+				565D13B66B9263D805CD378D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,24 @@
 			path = HeroTests;
 			sourceTree = "<group>";
 		};
+		565D13B66B9263D805CD378D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A113DC5E6E6B0F0B7AE41553 /* libPods-Hero.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFD99438A90B78F8DC9DC147 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B658292CCC81E667E89953B4 /* Pods-Hero.debug.xcconfig */,
+				8BB954BAE815E0D0C4F55D52 /* Pods-Hero.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../MainProject/Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -107,6 +132,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44FA779624CACE460018DB58 /* Build configuration list for PBXNativeTarget "Hero" */;
 			buildPhases = (
+				91F248EA06DB10221B125C8E /* [CP] Check Pods Manifest.lock */,
 				44FA777D24CACE460018DB58 /* Headers */,
 				44FA777E24CACE460018DB58 /* Sources */,
 				44FA777F24CACE460018DB58 /* Frameworks */,
@@ -193,6 +219,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91F248EA06DB10221B125C8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44FA777E24CACE460018DB58 /* Sources */ = {
@@ -344,6 +395,7 @@
 		};
 		44FA779724CACE460018DB58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B658292CCC81E667E89953B4 /* Pods-Hero.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +422,7 @@
 		};
 		44FA779824CACE460018DB58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BB954BAE815E0D0C4F55D52 /* Pods-Hero.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
